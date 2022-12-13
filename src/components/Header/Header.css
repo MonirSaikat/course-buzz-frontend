@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Arimo:ital,wght@0,600;1,500;1,600&display=swap');
+
+header.header {
+  padding: 0 1rem;
+  background-color: #00000048;
+  background-attachment: fixed;
+  background-size: contain;
+  background-blend-mode: multiply;
+  height: 40rem;
+  display: flex;
+  align-items: center;
+  color: white;
+}
+
+header.header h1 {
+  font-size: 4rem;
+  font-family: 'Custom';
+  letter-spacing: 3p x;
+  color: var(--light-color);
+}
+
+header.header h1 span {
+  position: relative;
+}
+
+header.header h1 span::before {
+  position: absolute;
+  content: '';
+  width: 100%;
+  top: -20px;
+  left: 0;
+  height: 10px;
+  background-color: var(--light-color);
+  border-radius: 30px;
+}
+
+header.header h3 {
+  font-size: 2rem;
+}
+
+header.header .btn {
+  margin-top: 1rem;
+  font-size: 1.1rem;
+}
+
+@media (max-width: 768px) {
+  header.header h1 {
+    font-size: 3rem;
+  }
+
+  header.header {
+    font-size: 13px;
+  }
+}

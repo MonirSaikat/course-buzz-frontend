@@ -1,0 +1,137 @@
+.navbar {
+  position: sticky;
+  top: 0;
+  background-color: rgba(22, 21, 21, 0.87);
+  left: 0;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  backdrop-filter: blur(20px);
+  padding: 1rem 0;
+  z-index: 9;
+}
+
+.navbar .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar a {
+  color: var(--primary-color);
+}
+
+.navbar .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--primary-color);
+  letter-spacing: 1px;
+}
+
+.navbar .logo span {
+  color: var(--light-color);
+}
+
+.navbar ul {
+  display: flex;
+  align-items: center;
+}
+
+.navbar ul li {
+  margin: 0 12px;
+}
+
+.navbar .logout img {
+  cursor: pointer;
+  width: 1.7rem;
+}
+
+.navbar ul li a:hover {
+  text-decoration: underline;
+}
+
+.navbar li .icon {
+  display: none;
+}
+
+.navbar li .icon img {
+  width: 2rem;
+}
+
+@media (max-width: 600px) {
+  .navbar a {
+    font-size: 12px;
+  }
+
+  .navbar .btn:not(.mobile) {
+    display: none;
+  }
+
+  .navbar li .icon {
+    display: block;
+  }
+}
+
+.navbar-toggler {
+  display: none;
+}
+
+/* add mobile navbar unde 700px */
+@media (max-width: 700px) {
+  .navbar .pc-menu {
+    display: none;
+  }
+
+  .navbar .pc-menu.mobile {
+    position: absolute;
+    background-color: var(--primary-color) !important;
+    display: block;
+    right: -300px;
+    top: -350px;
+    width: 100%;
+    animation: nav-slide 0.5s linear;
+    height: 700px;
+    width: 700px;
+    border-radius: 50%;
+  }
+
+  @keyframes nav-slide {
+    from {
+      right: -500px;
+      top: -500px;
+    }
+    to {
+      right: -300px;
+      top: -350px;
+    }
+  }
+
+  .navbar .pc-menu.mobile ul {
+    display: block;
+    position: absolute;
+    bottom: 4rem;
+    left: 10rem;
+  }
+
+  .navbar .navbar-toggler {
+    display: block;
+    z-index: 999999;
+    cursor: pointer;
+  }
+
+  .navbar .navbar-toggler img {
+    width: 2rem;
+  }
+
+  .navbar .pc-menu.mobile ul li {
+    text-align: center;
+    margin: 1.2rem 0;
+  }
+
+  .navbar .pc-menu.mobile ul li a {
+    color: black;
+    font-size: 1rem;
+  }
+
+  .navbar .pc-menu.mobile ul li a:hover {
+    color: white;
+  }
+}
