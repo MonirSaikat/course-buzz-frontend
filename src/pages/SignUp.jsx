@@ -1,6 +1,5 @@
 import React from 'react';
-import { useTranslation } from 'react-i18next';
-import { Link, Navigate, useLocation } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { registerUser } from '../adapter/authAdapter';
 import Form from '../components/Form/Form';
 import { useAuth } from '../hooks/auth/useAuth';
@@ -9,8 +8,6 @@ import { useLocalStorage } from '../hooks/useLocalstorage';
 function SignUp() {
   const [token, setToken] = useLocalStorage('token', '');
   const { user, setUser, setFormSubmitting } = useAuth();
-  // const location = useLocation();
-  // const { t } = useTranslation();
 
   const handleSubmit = (data) => {
     registerUser(data)
@@ -27,41 +24,35 @@ function SignUp() {
       });
   };
 
-  // if user is logged in, redirect to home page
-  // const { from } = location.state || { from: { pathname: '/' } };
-  // if (user) {
-  //   return <Navigate to={from} />;
-  // }
-
   const inputs = [
     {
-      label: 'signUp.name.label',
+      label: 'Name',
       type: 'text',
       name: 'name',
-      placeholder: 'signUp.name.placeholder',
+      placeholder: 'Enter your full name',
     },
     {
-      label: 'signUp.email.label',
+      label: 'Email',
       type: 'email',
       name: 'email',
-      placeholder: 'signUp.email.placeholder',
+      placeholder: 'Enter you email',
     },
     {
-      label: 'signUp.password.label',
+      label: 'Password',
       name: 'password',
       type: 'password',
-      placeholder: 'signUp.password.placeholder',
+      placeholder: 'Enter new password',
     },
   ];
 
   return (
     <div className="page">
       <div className="container">
-        <h>{'signUp.title'}</h>
+        <h>Sign Up</h>
         <Form inputs={inputs} handler={handleSubmit} />
         <p className="help-text">
-          {'utils.alreadyHaveAC'}
-          <Link to="/sign-in">{'signIn.title'}</Link>
+          <span>Already have an account ? </span>
+          <Link to="/sign-in">Login</Link>
         </p>
       </div>
     </div>
