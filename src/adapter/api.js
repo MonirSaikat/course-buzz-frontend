@@ -1,9 +1,10 @@
 import Axios from 'axios';
 
 const env = 'development';
+const baseURL = 'https://cb-backend.onrender.com/api';
 
 export const api = Axios.create({
-  baseURL: env === 'development' ? 'http://localhost:5555/api' : 'https://course-buzz.herokuapp.com/api',
+  baseURL,
   headers: {
     'Content-Type': 'application/json',
     Accept: 'application/json',
