@@ -1,7 +1,7 @@
-import React from 'react';
-import ProfileCard from '../components/Profile/ProfileCard';
-import VideoLlist from '../components/Videos/VideoLlist';
-import { useAuth } from '../hooks/auth/useAuth';
+import React from "react";
+import ProfileCard from "../components/Profile/ProfileCard";
+import VideoLlist from "../components/Videos/VideoLlist";
+import { useAuth } from "../hooks/auth/useAuth";
 
 function Profile() {
   const { user, myVideos } = useAuth();

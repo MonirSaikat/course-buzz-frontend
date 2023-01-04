@@ -1,19 +1,19 @@
-import React, { useEffect, useState } from 'react';
-import { useTranslation } from 'react-i18next';
-import Select from 'react-select';
-import './LanguagePicker.css';
+import React, { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
+import Select from "react-select";
+import "./LanguagePicker.css";
 
 function LanguagePicker() {
-  const [lang, setLang] = useState('bn');
+  const [lang, setLang] = useState("bn");
   // const { i18n } = useTranslation();
   const options = [
     {
-      label: 'English',
-      value: 'en',
+      label: "English",
+      value: "en",
     },
     {
-      label: 'Bengali',
-      value: 'bn',
+      label: "Bengali",
+      value: "bn",
     },
   ];
 

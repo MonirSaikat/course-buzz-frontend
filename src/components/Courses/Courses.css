@@ -1,5 +1,5 @@
 .courses {
-  background-size: cover;  
+  background-size: cover;
   background-position: center;
   background-attachment: fixed;
 }
@@ -40,4 +40,3 @@
     grid-gap: 2rem;
   }
 }
-  

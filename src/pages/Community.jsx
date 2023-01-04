@@ -1,6 +1,6 @@
-import React from 'react';
-import { Outlet } from 'react-router-dom';
-import './styles/Community.css';
+import React from "react";
+import { Outlet } from "react-router-dom";
+import "./styles/Community.css";
 
 function Community() {
   return (

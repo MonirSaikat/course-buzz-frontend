@@ -1,5 +1,5 @@
-import React from 'react';
-import './Select.css';
+import React from "react";
+import "./Select.css";
 
 function Select({ label, name, error, options }) {
   return (

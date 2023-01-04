@@ -1,16 +1,16 @@
-import React, { useEffect, useState } from 'react';
-import { Helmet } from 'react-helmet';
-import { useParams } from 'react-router-dom';
-import { fetchQuestionById } from '../adapter/discussAdapter';
-import AddReply from '../components/Replies/AddReply';
-import RepliesList from '../components/Replies/RepliesList';
-import { useLocalStorage } from '../hooks/useLocalstorage';
-import './styles/Replies.css';
+import React, { useEffect, useState } from "react";
+import { Helmet } from "react-helmet";
+import { useParams } from "react-router-dom";
+import { fetchQuestionById } from "../adapter/discussAdapter";
+import AddReply from "../components/Replies/AddReply";
+import RepliesList from "../components/Replies/RepliesList";
+import { useLocalStorage } from "../hooks/useLocalstorage";
+import "./styles/Replies.css";
 
 function Replies() {
   const params = useParams();
   const [question, setQuestion] = useState(null);
-  const [token] = useLocalStorage('token');
+  const [token] = useLocalStorage("token");
 
   useEffect(() => {
     fetchQuestionById(token, params.id)
@@ -30,7 +30,7 @@ function Replies() {
       {question && <h1>{question.text} ?</h1>}
       {question && (
         <p>
-          by <strong>{question.user.name}</strong> in{' '}
+          by <strong>{question.user.name}</strong> in{" "}
           <strong>#{question.category}</strong>
         </p>
       )}

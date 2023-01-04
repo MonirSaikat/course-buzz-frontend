@@ -1,7 +1,7 @@
-import React, { createRef, useCallback, useEffect } from 'react';
-import { Link } from 'react-router-dom';
-import { useAuth } from '../../hooks/auth/useAuth';
-import './Navbar.css';
+import React, { createRef, useCallback, useEffect } from "react";
+import { Link } from "react-router-dom";
+import { useAuth } from "../../hooks/auth/useAuth";
+import "./Navbar.css";
 
 function Navbar() {
   const { user } = useAuth();
@@ -9,58 +9,63 @@ function Navbar() {
 
   const links = [
     {
-      to: '/',
-      text: 'Home'
+      to: "/",
+      text: "Home",
     },
     {
-      to: '/courses',
-      text: 'Courses'
+      to: "/courses",
+      text: "Courses",
     },
     {
-      to: '/community?key=all',
-      text: 'Community'
+      to: "/community?key=all",
+      text: "Community",
     },
     {
-      to: user ? '/add-video' : '/sign-up',
-      text: user ? 'Add Video' : 'Sign up'
+      to: user ? "/add-video" : "/sign-up",
+      text: user ? "Add Video" : "Sign up",
     },
     {
-      to: user ? '/profile' : '/sign-in',
-      text : user ? 'Profile' : 'Sign In'
-    }
+      to: user ? "/profile" : "/sign-in",
+      text: user ? "Profile" : "Sign In",
+    },
   ];
 
-//   <Link
-//   className={`${
-//     navRef.current?.classList?.has('mobile')
-//       ? 'btn btn-primary'
-//       : ''
-//   }`}
-//   to={user ? '/profile' : '/sign-in'}
-// >
-//   {user ? 'navlinks.profile' : 'navlinks.signin'}
-// </Link>
+  //   <Link
+  //   className={`${
+  //     navRef.current?.classList?.has('mobile')
+  //       ? 'btn btn-primary'
+  //       : ''
+  //   }`}
+  //   to={user ? '/profile' : '/sign-in'}
+  // >
+  //   {user ? 'navlinks.profile' : 'navlinks.signin'}
+  // </Link>
 
-  const renderLinks = links.map((link,idx) => {
-    return <li key={idx}> <Link to={link.to}>{link.text}</Link> </li>
+  const renderLinks = links.map((link, idx) => {
+    return (
+      <li key={idx}>
+        {" "}
+        <Link to={link.to}>{link.text}</Link>{" "}
+      </li>
+    );
   });
 
   const toggleMenu = useCallback(() => {
-    navRef.current.classList.toggle('mobile');
+    navRef.current.classList.toggle("mobile");
   }, [navRef]);
 
   useEffect(() => {
-    const clickListener = window.addEventListener('click', function (e) {
+    const clickListener = window.addEventListener("click", function (e) {
       if (
-        e.target.nodeName === 'A' ||
-        (!e.target.classList.contains('mobile') &&
-          !e.target.classList.contains('toggler-img'))
+        e.target.nodeName === "A" ||
+        (!e.target.classList.contains("mobile") &&
+          !e.target.classList.contains("toggler-img"))
       ) {
-        navRef.current?.classList?.remove('mobile');
+        navRef.current?.classList?.remove("mobile");
       }
     });
 
-    return () => window.removeEventListener('click', clickListener);
+    return () => window.removeEventListener("click", clickListener);
   }, [navRef]);
 
   return (
@@ -75,9 +80,7 @@ function Navbar() {
         </span>
 
         <div className="pc-menu" ref={navRef}>
-          <ul>
-            {renderLinks}
-          </ul>
+          <ul>{renderLinks}</ul>
         </div>
       </div>
     </nav>

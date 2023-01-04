@@ -1,14 +1,14 @@
-import { createContext, useEffect, useState } from 'react';
-import { isLoggedIn } from '../adapter/authAdapter';
-import { fetchVideosByUserId } from '../adapter/videosAdapter';
-import { useLocalStorage } from '../hooks/useLocalstorage';
+import { createContext, useEffect, useState } from "react";
+import { isLoggedIn } from "../adapter/authAdapter";
+import { fetchVideosByUserId } from "../adapter/videosAdapter";
+import { useLocalStorage } from "../hooks/useLocalstorage";
 
 export const AuthContext = createContext();
 
 function AuthProvider({ children }) {
   const [user, setUser] = useState(null);
   const [myVideos, setMyVideos] = useState([]);
-  const [token] = useLocalStorage('token', '');
+  const [token] = useLocalStorage("token", "");
   const [formSubmitting, setFormSubmitting] = useState(false);
 
   useEffect(() => {

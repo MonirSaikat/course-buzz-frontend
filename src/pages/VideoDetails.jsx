@@ -1,10 +1,10 @@
-import React from 'react';
-import { Link, useParams } from 'react-router-dom';
-import { useVideo } from '../hooks/videos/useVideo';
-import { get_youtube_thumbnail } from '../utils/utils.js';
-import { useAuth } from '../hooks/auth/useAuth';
-import Review from '../components/Review/Review';
-import './styles/VideoDetails.css';
+import React from "react";
+import { Link, useParams } from "react-router-dom";
+import { useVideo } from "../hooks/videos/useVideo";
+import { get_youtube_thumbnail } from "../utils/utils.js";
+import { useAuth } from "../hooks/auth/useAuth";
+import Review from "../components/Review/Review";
+import "./styles/VideoDetails.css";
 
 function VideoDetails() {
   const { id } = useParams();
@@ -34,7 +34,7 @@ function VideoDetails() {
                 <Link to={`/courses/learn-${video?.category}`}>
                   {video.category}
                 </Link>
-              </strong>{' '}
+              </strong>{" "}
               category
             </p>
 
@@ -48,11 +48,11 @@ function VideoDetails() {
             </a>
             <a
               href={video.url}
-              target={'_blank'}
+              target={"_blank"}
               className="btn"
               rel="noreferrer noopener"
             >
-              <img src="/img/youtube.svg" alt="" />{' '}
+              <img src="/img/youtube.svg" alt="" />{" "}
               <span>Watch on YouTube</span>
             </a>
           </div>

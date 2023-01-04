@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Anton&family=Arimo:ital,wght@0,600;1,500;1,600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Arimo:ital,wght@0,600;1,500;1,600&display=swap");
 
 header.header {
   padding: 0 1rem;
@@ -14,7 +14,7 @@ header.header {
 
 header.header h1 {
   font-size: 4rem;
-  font-family: 'Custom';
+  font-family: "Custom";
   letter-spacing: 3p x;
   color: var(--light-color);
 }
@@ -25,7 +25,7 @@ header.header h1 span {
 
 header.header h1 span::before {
   position: absolute;
-  content: '';
+  content: "";
   width: 100%;
   top: -20px;
   left: 0;

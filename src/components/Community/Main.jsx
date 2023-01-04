@@ -1,7 +1,7 @@
-import React from 'react';
-import { useCourse } from '../../hooks/course/useCourse';
-import DiscussionList from './DiscussionList';
-import Filter from './Filter';
+import React from "react";
+import { useCourse } from "../../hooks/course/useCourse";
+import DiscussionList from "./DiscussionList";
+import Filter from "./Filter";
 
 function Main() {
   const { categories } = useCourse();

@@ -1,7 +1,7 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import moment from 'moment';
-import './DiscussionCard.css';
+import React from "react";
+import { Link } from "react-router-dom";
+import moment from "moment";
+import "./DiscussionCard.css";
 
 function DiscussionCard({ discussion }) {
   const { _id, category, text, replies, createdAt } = discussion;

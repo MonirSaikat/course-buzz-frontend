@@ -7,6 +7,7 @@
 | ![](preview-1.png) | ![](preview-2.png) |
 
 ## Features
+
 - Users can register, login and watch video courses categorized
 - Users can add videos based on categories
 - Users can remove the videos added by them

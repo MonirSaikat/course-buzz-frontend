@@ -1,13 +1,13 @@
-import React from 'react';
-import { addReply } from '../../adapter/discussAdapter';
-import { useAuth } from '../../hooks/auth/useAuth';
-import { useLocalStorage } from '../../hooks/useLocalstorage';
-import Form from '../Form/Form';
-import './AddReply.css';
+import React from "react";
+import { addReply } from "../../adapter/discussAdapter";
+import { useAuth } from "../../hooks/auth/useAuth";
+import { useLocalStorage } from "../../hooks/useLocalstorage";
+import Form from "../Form/Form";
+import "./AddReply.css";
 
 function AddReply({ discussionId, setQuestion }) {
   const { setFormSubmitting, user } = useAuth();
-  const [token] = useLocalStorage('token');
+  const [token] = useLocalStorage("token");
 
   const handler = (data) => {
     addReply(token, {
@@ -25,9 +25,9 @@ function AddReply({ discussionId, setQuestion }) {
 
   const inputs = [
     {
-      name: 'text',
-      type: 'text',
-      label: 'Reply',
+      name: "text",
+      type: "text",
+      label: "Reply",
       disabled: user ? false : true,
     },
   ];

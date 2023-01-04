@@ -1,6 +1,6 @@
-import { Navigate, Outlet, useLocation, useNavigate } from 'react-router-dom';
-import swal from 'sweetalert';
-import { useAuth } from '../hooks/auth/useAuth';
+import { Navigate, Outlet, useLocation, useNavigate } from "react-router-dom";
+import swal from "sweetalert";
+import { useAuth } from "../hooks/auth/useAuth";
 
 function PrivatePage() {
   const { user } = useAuth();

@@ -1,10 +1,10 @@
-import swal from 'sweetalert';
-import { api } from './api';
+import swal from "sweetalert";
+import { api } from "./api";
 
 // login user
 export const loginUser = ({ email, password }) => {
-  return api('/auth/login', {
-    method: 'POST',
+  return api("/auth/login", {
+    method: "POST",
     data: {
       email,
       password,
@@ -16,7 +16,7 @@ export const loginUser = ({ email, password }) => {
     })
     .catch((error) => {
       if (error.response) {
-        swal('Error', error.response.data, 'error');
+        swal("Error", error.response.data, "error");
       }
       throw error;
     });
@@ -24,8 +24,8 @@ export const loginUser = ({ email, password }) => {
 
 // register user
 export const registerUser = ({ name, email, password }) => {
-  return api('/auth/register', {
-    method: 'POST',
+  return api("/auth/register", {
+    method: "POST",
     data: {
       name,
       email,
@@ -35,7 +35,7 @@ export const registerUser = ({ name, email, password }) => {
     .then((res) => res.data)
     .catch((error) => {
       if (error.response) {
-        swal('Error', error.response.data, 'error');
+        swal("Error", error.response.data, "error");
       }
       throw error;
     });
@@ -43,8 +43,8 @@ export const registerUser = ({ name, email, password }) => {
 
 // check if user is logged in
 export const isLoggedIn = (token) => {
-  return api('/auth/status', {
-    method: 'POST',
+  return api("/auth/status", {
+    method: "POST",
     headers: {
       Authorization: `Bearer ${token}`,
     },
@@ -52,12 +52,12 @@ export const isLoggedIn = (token) => {
     .then((res) => res.data)
     .catch((error) => {
       if (error.response) {
-        swal('Error', error.response.data.message, 'error');
+        swal("Error", error.response.data.message, "error");
       }
     });
 };
 
 // logout user
 export const logoutUser = () => {
-  localStorage.removeItem('token');
+  localStorage.removeItem("token");
 };

@@ -1,15 +1,15 @@
-import React, { useState } from 'react';
-import { useSearchParams } from 'react-router-dom';
-import { askNewQuestion } from '../../adapter/discussAdapter';
-import { useAuth } from '../../hooks/auth/useAuth';
-import { useLocalStorage } from '../../hooks/useLocalstorage';
-import Form from '../Form/Form';
+import React, { useState } from "react";
+import { useSearchParams } from "react-router-dom";
+import { askNewQuestion } from "../../adapter/discussAdapter";
+import { useAuth } from "../../hooks/auth/useAuth";
+import { useLocalStorage } from "../../hooks/useLocalstorage";
+import Form from "../Form/Form";
 
 function Ask() {
   const [searchParams, setSearchParams] = useSearchParams();
   const { setFormSubmitting } = useAuth();
-  const [token] = useLocalStorage('token', '');
-  const [category] = useState(() => searchParams.get('key'));
+  const [token] = useLocalStorage("token", "");
+  const [category] = useState(() => searchParams.get("key"));
 
   const handler = (data) => {
     askNewQuestion(token, data)
@@ -24,14 +24,14 @@ function Ask() {
 
   const inputs = [
     {
-      name: 'category',
-      label: 'Category',
+      name: "category",
+      label: "Category",
       value: category,
       disabled: true,
     },
     {
-      name: 'text',
-      label: 'Question',
+      name: "text",
+      label: "Question",
     },
   ];
 

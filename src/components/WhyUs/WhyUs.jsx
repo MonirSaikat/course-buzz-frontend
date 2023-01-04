@@ -1,6 +1,6 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import './WhyUs.css';
+import React from "react";
+import { Link } from "react-router-dom";
+import "./WhyUs.css";
 
 function WhyUs() {
   return (
@@ -9,8 +9,11 @@ function WhyUs() {
         <div className="row">
           <div className="col" data-aos="fade-right">
             <h1 className="section-title">Why you start from here ?</h1>
-            <p>This is open sorce and free forever. You can contribute by adding best courses you have finded.</p>
-            <Link to={'/community'} className="btn btn-secondary">
+            <p>
+              This is open sorce and free forever. You can contribute by adding
+              best courses you have finded.
+            </p>
+            <Link to={"/community"} className="btn btn-secondary">
               Community
             </Link>
           </div>

@@ -1,6 +1,6 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import './Pagination.css';
+import React from "react";
+import { Link } from "react-router-dom";
+import "./Pagination.css";
 
 function Pagination({
   hasNextPage,
@@ -22,7 +22,7 @@ function Pagination({
     <div className="pagination">
       <Link
         onClick={(e) => handleClick(e, page - 1)}
-        className={!hasPrevPage ? 'disabled' : ''}
+        className={!hasPrevPage ? "disabled" : ""}
         to="#"
       >
         &laquo;
@@ -34,7 +34,7 @@ function Pagination({
         return (
           <Link
             onClick={(e) => handleClick(e, index + 1)}
-            className={page === index + 1 ? 'active' : ''}
+            className={page === index + 1 ? "active" : ""}
             key={index}
             to={`/`}
           >
@@ -45,7 +45,7 @@ function Pagination({
 
       <Link
         onClick={(e) => handleClick(e, page + 1)}
-        className={!hasNextPage ? 'disabled' : ''}
+        className={!hasNextPage ? "disabled" : ""}
         to="#"
       >
         &raquo;

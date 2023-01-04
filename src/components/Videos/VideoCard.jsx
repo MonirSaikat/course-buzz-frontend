@@ -1,14 +1,14 @@
-import React from 'react';
-import { useLocalStorage } from '../../hooks/useLocalstorage';
-import { useVideo } from '../../hooks/videos/useVideo';
-import { useAuth } from '../../hooks/auth/useAuth';
-import { deleteVideoById } from '../../adapter/videosAdapter';
-import { Link } from 'react-router-dom';
-import { get_youtube_thumbnail } from '../../utils/utils';
-import './VideoCard.css';
+import React from "react";
+import { useLocalStorage } from "../../hooks/useLocalstorage";
+import { useVideo } from "../../hooks/videos/useVideo";
+import { useAuth } from "../../hooks/auth/useAuth";
+import { deleteVideoById } from "../../adapter/videosAdapter";
+import { Link } from "react-router-dom";
+import { get_youtube_thumbnail } from "../../utils/utils";
+import "./VideoCard.css";
 
 function VideoCard({ video }) {
-  const [token] = useLocalStorage('token');
+  const [token] = useLocalStorage("token");
   const { user, removeMyVideo } = useAuth();
   const { setPlayingVideo, removeVideoById } = useVideo();
   const ownVideo = user && user._id === video?.user;

@@ -1,8 +1,8 @@
-import React from 'react';
-import Modal from 'react-modal';
-import YouTube from 'react-youtube';
-import { useVideo } from '../../hooks/videos/useVideo';
-import './VideoModal.css';
+import React from "react";
+import Modal from "react-modal";
+import YouTube from "react-youtube";
+import { useVideo } from "../../hooks/videos/useVideo";
+import "./VideoModal.css";
 
 // get video id from youtube url
 function yotubeVideoId(url) {
@@ -27,8 +27,8 @@ function VideoModal() {
         <div>
           <YouTube
             opts={{
-              width: '350px',
-              height: '200px',
+              width: "350px",
+              height: "200px",
             }}
             videoId={yotubeVideoId(video?.url)}
           />

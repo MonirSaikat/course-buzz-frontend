@@ -1,12 +1,12 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { registerUser } from '../adapter/authAdapter';
-import Form from '../components/Form/Form';
-import { useAuth } from '../hooks/auth/useAuth';
-import { useLocalStorage } from '../hooks/useLocalstorage';
+import React from "react";
+import { Link } from "react-router-dom";
+import { registerUser } from "../adapter/authAdapter";
+import Form from "../components/Form/Form";
+import { useAuth } from "../hooks/auth/useAuth";
+import { useLocalStorage } from "../hooks/useLocalstorage";
 
 function SignUp() {
-  const [token, setToken] = useLocalStorage('token', '');
+  const [token, setToken] = useLocalStorage("token", "");
   const { user, setUser, setFormSubmitting } = useAuth();
 
   const handleSubmit = (data) => {
@@ -26,22 +26,22 @@ function SignUp() {
 
   const inputs = [
     {
-      label: 'Name',
-      type: 'text',
-      name: 'name',
-      placeholder: 'Enter your full name',
+      label: "Name",
+      type: "text",
+      name: "name",
+      placeholder: "Enter your full name",
     },
     {
-      label: 'Email',
-      type: 'email',
-      name: 'email',
-      placeholder: 'Enter you email',
+      label: "Email",
+      type: "email",
+      name: "email",
+      placeholder: "Enter you email",
     },
     {
-      label: 'Password',
-      name: 'password',
-      type: 'password',
-      placeholder: 'Enter new password',
+      label: "Password",
+      name: "password",
+      type: "password",
+      placeholder: "Enter new password",
     },
   ];
 

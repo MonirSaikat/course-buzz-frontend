@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&display=swap");
 
 * {
   box-sizing: border-box;
@@ -8,8 +8,8 @@
 
 /* fonts */
 @font-face {
-  font-family: 'Custom';
-  src: url('./fonts/font-one.woff');
+  font-family: "Custom";
+  src: url("./fonts/font-one.woff");
 }
 
 /* variables */
@@ -24,7 +24,7 @@
 html,
 body {
   overflow-x: hidden !important;
-  font-family: 'Hind Siliguri', sans-serif;
+  font-family: "Hind Siliguri", sans-serif;
 }
 
 ::selection {
@@ -32,7 +32,7 @@ body {
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   position: relative;
   color: #523a34;
 }
@@ -156,5 +156,5 @@ section {
 }
 
 .section-title {
-  font-family: 'Custom';
+  font-family: "Custom";
 }

@@ -1,7 +1,7 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import VideoCard from './VideoCard';
-import './VideoList.css';
+import React from "react";
+import { Link } from "react-router-dom";
+import VideoCard from "./VideoCard";
+import "./VideoList.css";
 
 function VideoLlist({ videos }) {
   return (

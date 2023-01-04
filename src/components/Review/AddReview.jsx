@@ -1,13 +1,13 @@
-import React from 'react';
-import Form from '../Form/Form';
-import { useLocalStorage } from '../../hooks/useLocalstorage';
-import './AddReview.css';
-import { addReviewById } from '../../adapter/videosAdapter';
-import swal from 'sweetalert';
-import { useAuth } from '../../hooks/auth/useAuth';
+import React from "react";
+import Form from "../Form/Form";
+import { useLocalStorage } from "../../hooks/useLocalstorage";
+import "./AddReview.css";
+import { addReviewById } from "../../adapter/videosAdapter";
+import swal from "sweetalert";
+import { useAuth } from "../../hooks/auth/useAuth";
 
 function AddReview({ videoId, addReview }) {
-  const [token] = useLocalStorage('token');
+  const [token] = useLocalStorage("token");
   const { setFormSubmitting } = useAuth();
 
   const handler = (data) => {
@@ -15,7 +15,7 @@ function AddReview({ videoId, addReview }) {
       .then((data) => {
         addReview(data);
         setFormSubmitting(false);
-        swal('Success', 'Review added', 'success');
+        swal("Success", "Review added", "success");
       })
       .catch(() => {
         setFormSubmitting(false);
@@ -24,9 +24,9 @@ function AddReview({ videoId, addReview }) {
 
   const inputs = [
     {
-      name: 'text',
-      label: 'Review',
-      type: 'text',
+      name: "text",
+      label: "Review",
+      type: "text",
     },
   ];
 

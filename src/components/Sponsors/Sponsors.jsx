@@ -1,14 +1,14 @@
-import React, { useState } from 'react';
-import './Sponsors.css';
+import React, { useState } from "react";
+import "./Sponsors.css";
 
 function Sponsors() {
   const [images] = useState([
-    '/img/sponsors/img1.png',
-    '/img/sponsors/img2.png',
-    '/img/sponsors/img3.png',
-    '/img/sponsors/img4.png',
-    '/img/sponsors/img5.png',
-    '/img/sponsors/img6.png',
+    "/img/sponsors/img1.png",
+    "/img/sponsors/img2.png",
+    "/img/sponsors/img3.png",
+    "/img/sponsors/img4.png",
+    "/img/sponsors/img5.png",
+    "/img/sponsors/img6.png",
   ]);
 
   return (

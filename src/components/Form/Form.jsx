@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
-import Input from './Input';
-import Select from './Select';
-import { useAuth } from '../../hooks/auth/useAuth';
-import Loading from '../Loading/Loading';
-import './Form.css';
-import { useTranslation } from 'react-i18next';
+import React, { useState } from "react";
+import Input from "./Input";
+import Select from "./Select";
+import { useAuth } from "../../hooks/auth/useAuth";
+import Loading from "../Loading/Loading";
+import "./Form.css";
+import { useTranslation } from "react-i18next";
 
 function Form({ handler, inputs, disabledButton }) {
   const [errors, setErrors] = useState([]);
@@ -22,7 +22,7 @@ function Form({ handler, inputs, disabledButton }) {
       const value = e.target[input.name].value;
 
       // validate input
-      if (value.toString().trim() === '') {
+      if (value.toString().trim() === "") {
         newErrors.push({
           name: input.name,
           message: `${input.label} is required`,
@@ -47,7 +47,7 @@ function Form({ handler, inputs, disabledButton }) {
   return (
     <form className="form" onSubmit={handleSubmit}>
       {inputs.map((input) =>
-        input.type === 'select' ? (
+        input.type === "select" ? (
           <Select
             label={input.label}
             name={input.name}
@@ -71,7 +71,7 @@ function Form({ handler, inputs, disabledButton }) {
         type="submit"
         disabled={disabledButton}
       >
-        {submitting ? <Loading /> : t('utils.submitText')}
+        {submitting ? <Loading /> : t("utils.submitText")}
       </button>
     </form>
   );

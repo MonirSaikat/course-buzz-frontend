@@ -1,13 +1,13 @@
-import { createContext, useEffect, useState } from 'react';
-import VideoModal from '../components/Videos/VideoModal';
-import { useLocalStorage } from '../hooks/useLocalstorage';
-import { fetchAllVideos } from '../adapter/videosAdapter';
+import { createContext, useEffect, useState } from "react";
+import VideoModal from "../components/Videos/VideoModal";
+import { useLocalStorage } from "../hooks/useLocalstorage";
+import { fetchAllVideos } from "../adapter/videosAdapter";
 
 export const VideoContext = createContext();
 
 function VideoProvider({ children }) {
   const [playingVideo, setPlayingVideo] = useState();
-  const [token] = useLocalStorage('token', '');
+  const [token] = useLocalStorage("token", "");
   const [videos, setVideos] = useState([]);
 
   // fetch videos

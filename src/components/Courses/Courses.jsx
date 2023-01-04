@@ -1,7 +1,7 @@
-import React from 'react';
-import { useCourse } from '../../hooks/course/useCourse';
-import CourseCard from './CourseCard';
-import './Courses.css';
+import React from "react";
+import { useCourse } from "../../hooks/course/useCourse";
+import CourseCard from "./CourseCard";
+import "./Courses.css";
 
 function Courses({ limit }) {
   const { categories } = useCourse();

@@ -1,6 +1,6 @@
-import React from 'react';
-import ReviewCard from './ReviewCard';
-import './ReviewList.css';
+import React from "react";
+import ReviewCard from "./ReviewCard";
+import "./ReviewList.css";
 
 function ReviewList({ reviews }) {
   return (

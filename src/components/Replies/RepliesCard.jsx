@@ -1,6 +1,6 @@
-import React from 'react';
-import moment from 'moment';
-import './RepliesCard.css';
+import React from "react";
+import moment from "moment";
+import "./RepliesCard.css";
 
 function RepliesCard({ reply }) {
   console.log(reply);
