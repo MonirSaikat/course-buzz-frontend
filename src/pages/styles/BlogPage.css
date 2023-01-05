@@ -1,0 +1,28 @@
+.blog-page {
+  padding: 2rem 0 !important;
+}
+
+.blog-page .posts-list {
+  margin: 10px 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+}
+
+.blog-page .blog-post-card h2 {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+}
+
+.blog-page .blog-post-card p {
+  margin-bottom: 1rem;
+  display: -webkit-box;
+  max-width: 100%;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.blog-page .blog-post-card time {
+  font-size: 12px;
+}
