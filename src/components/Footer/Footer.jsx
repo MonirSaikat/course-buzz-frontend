@@ -30,7 +30,7 @@ function Footer() {
       text: "Community",
     },
     {
-      to: "/blogs",
+      to: "/blog",
       text: "Blog",
     },
     {
