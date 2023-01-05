@@ -14,6 +14,7 @@ import AddVideo from "./pages/AddVideo";
 import Profile from "./pages/Profile";
 import Footer from "./components/Footer/Footer";
 import VideoDetails from "./pages/VideoDetails";
+import BlogPage from "./pages/Blog";
 import AOS from "aos";
 import { useEffect } from "react";
 import Community from "./pages/Community";
@@ -42,6 +43,7 @@ function App() {
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/courses" element={<CoursePage />} />
+              <Route path='/blog' element={<BlogPage />} />
 
               <Route path="/community" element={<Community />}>
                 <Route index element={<Main />} />
