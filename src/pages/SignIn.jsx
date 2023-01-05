@@ -51,7 +51,7 @@ function SignIn() {
 
   return (
     <div className="page">
-      <div className="container">
+      <div className="small-container">
         <h1>{t("signIn.title")}</h1>
         <Form inputs={inputs} handler={handleSubmit} />
         <p className="help-text">

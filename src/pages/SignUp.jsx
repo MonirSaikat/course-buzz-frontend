@@ -47,7 +47,7 @@ function SignUp() {
 
   return (
     <div className="page">
-      <div className="container">
+      <div className="small-container">
         <h1>Sign Up</h1>
         <Form inputs={inputs} handler={handleSubmit} />
         <p className="help-text">

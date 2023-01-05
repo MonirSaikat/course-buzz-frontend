@@ -158,3 +158,8 @@ section {
 .section-title {
   font-family: "Custom";
 }
+
+.small-container {
+  max-width: 520px;
+  margin: 0 auto;
+}
