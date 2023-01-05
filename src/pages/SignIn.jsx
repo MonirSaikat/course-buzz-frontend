@@ -2,6 +2,7 @@ import React from "react";
 import { useTranslation } from "react-i18next";
 import { Link, Navigate, useLocation } from "react-router-dom";
 import { loginUser } from "../adapter/authAdapter";
+import { Card } from '../components/Card/Card';
 import Form from "../components/Form/Form";
 import { useAuth } from "../hooks/auth/useAuth";
 import { useLocalStorage } from "../hooks/useLocalstorage";
@@ -52,11 +53,13 @@ function SignIn() {
   return (
     <div className="page">
       <div className="small-container">
-        <h1>{t("signIn.title")}</h1>
-        <Form inputs={inputs} handler={handleSubmit} />
-        <p className="help-text">
-          {t("utils.dontHaveAC")} <Link to="/sign-up">{t("signUp.title")}</Link>
-        </p>
+        <Card>
+          <h1>{t("signIn.title")}</h1>
+          <Form inputs={inputs} handler={handleSubmit} />
+          <p className="help-text">
+            {t("utils.dontHaveAC")} <Link to="/sign-up">{t("signUp.title")}</Link>
+          </p>
+        </Card>
       </div>
     </div>
   );

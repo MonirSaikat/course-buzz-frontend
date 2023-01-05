@@ -4,6 +4,7 @@ import { registerUser } from "../adapter/authAdapter";
 import Form from "../components/Form/Form";
 import { useAuth } from "../hooks/auth/useAuth";
 import { useLocalStorage } from "../hooks/useLocalstorage";
+import { Card } from '../components/Card/Card';
 
 function SignUp() {
   const [token, setToken] = useLocalStorage("token", "");
@@ -48,12 +49,14 @@ function SignUp() {
   return (
     <div className="page">
       <div className="small-container">
-        <h1>Sign Up</h1>
-        <Form inputs={inputs} handler={handleSubmit} />
-        <p className="help-text">
-          <span>Already have an account ? </span>
-          <Link to="/sign-in">Login</Link>
-        </p>
+        <Card>
+          <h1>Sign Up</h1>
+          <Form inputs={inputs} handler={handleSubmit} />
+          <p className="help-text">
+            <span>Already have an account ? </span>
+            <Link to="/sign-in">Login</Link>
+          </p>
+        </Card>
       </div>
     </div>
   );
